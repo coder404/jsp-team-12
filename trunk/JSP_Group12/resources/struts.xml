@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.custom.i18n.resources" value="ApplicationResources" />
+	<constant name="struts.custom.i18n.resources" value="RegisterAction" />
+	<package name="default" extends="struts-default">
+		<result-types>
+			<result-type name="tiles"
+				class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types>
+		<action name="login" method="execute" 
+			class="com.iiitb.eforum.URLAction">
+			<result name="success">/Login.jsp</result>
+		</action>
+		<action name="loginaction" method="execute"
+			class="com.iiitb.eforum.action.LoginAction">
+			<result name="success">/Welcome.jsp</result>
+			<result name="error">/Error.jsp</result>
+		</action>
+		<action name="signup" method="execute"
+			class="com.iiitb.eforum.URLAction">
+			<result name="success">/AddUserPage.jsp</result>
+		</action>
+		<action name="adduser" method="execute"
+			class="com.iiitb.eforum.action.AddUser">
+			<result name="success">/Welcome.jsp</result>
+			<result name="input">/AddUserPage.jsp</result>
+		</action>
+	</package>
+</struts>
