@@ -1,0 +1,14 @@
+@CHARSET "ISO-8859-1";
+
+body { background: white;
+       color: white;
+       font-family: times, serif;
+       font-size: 10pt }
+a:link {
+	color: red;
+	position:absolute;
+ top:0;
+ right:0;
+ width:200px;
+ font-size: 10pt
+}
